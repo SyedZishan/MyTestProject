@@ -5,6 +5,8 @@ All the designing is done with the help of css flexbox.
 Form submission is done with angular Reactive forms.
 All the html/styling/TypeScript can be found in app.components
 
+Note: Show All Select input is non functional..
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
