@@ -1,20 +1,90 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<section id="pgwrapper">
+  <header class="py-2 pb-4">
+      <h1 class="my-0 py-2 text-center font-size-3">Gif Search</h1>
+      <form  [formGroup]="gifSearchForm" (ngSubmit)="search()" novalidate>
+          <div class="flex-container py-2">
+              <input type="text" name="searchTerm" formControlName="searchTerm" class="search-control" placeholder="What are you looking for?">
+              <select name="category" formControName="category" class="search-option">
+                  <option value="Show All">Show All</option>
+              </select>
+              <button type="submit" class="z-btn search-btn"><i class="fa fa-search fa-lg" aria-hidden="true"></i></button>
+          </div>
+      </form>
+      <h2 class="my-0 text-center py-1">You can search any gif with our search</h2>
+      <p class="my-0 text-center py-1">Everything you need for your creative projects. websites, banners, presentations, magazines and advertising.</p>
+  </header>
+  <main class="">
+      <article class="p-2" >
+          <div class="d-flex flex-wrap ">
+            <div class="p-1" *ngFor="let img of data">
+              <img src="{{img.images.original_still.url}}" alt="">
+            </div>
+          </div>
+      </article>      
+  </main>
+  <footer>
+      <div class="footer-u flex-container">
+          <section class="signUp p-2">
+              <h1>Sign up and get free content every week.</h1>
+              <div class="d-flex"> 
+                  <input type="text" class="signup-control" placeholder="Enter your email...">
+              </div>
+              <div>
+                  <button class="signup-btn">Sign Up</button>
+              </div>
+          </section>
+          <aside class="p-2">
+              <h1 class="px-1">Browse by categories</h1>
+              <div class="px-1 d-flex flex-wrap">
+                  <a href="#" class="footer-link text-white"> Affiliates </a>
+                  <a href="#" class="footer-link text-white"> Contributors </a>
+                  <a href="#" class="footer-link text-white"> Press/Media </a>
+                  <a href="#" class="footer-link text-white"> Careers </a>
+                  <a href="#" class="footer-link text-white"> About </a>
+                  <a href="#" class="footer-link text-white"> Contact </a>
 
+                  <a href="#" class="footer-link text-white"> Affiliates </a>
+                  <a href="#" class="footer-link text-white"> Contributors </a>
+                  <a href="#" class="footer-link text-white"> Press/Media </a>
+                  <a href="#" class="footer-link text-white"> Careers </a>
+                  <a href="#" class="footer-link text-white"> About </a>
+                  <a href="#" class="footer-link text-white"> Contact </a>
+
+                  <a href="#" class="footer-link text-white"> Affiliates </a>
+                  <a href="#" class="footer-link text-white"> Contributors </a>
+                  <a href="#" class="footer-link text-white"> Press/Media </a>
+                  <a href="#" class="footer-link text-white"> Careers </a>
+                  <a href="#" class="footer-link text-white"> About </a>
+                  <a href="#" class="footer-link text-white"> Contact </a>
+
+                  <a href="#" class="footer-link text-white"> Affiliates </a>
+                  <a href="#" class="footer-link text-white"> Contributors </a>
+                  <a href="#" class="footer-link text-white"> Press/Media </a>
+                  <a href="#" class="footer-link text-white"> Careers </a>
+                  <a href="#" class="footer-link text-white"> About </a>
+                  <a href="#" class="footer-link text-white"> Contact </a>
+              </div>
+              
+          </aside>
+          
+      </div>
+      <div class="footer-l d-flex justify-content-between p-1">
+          <p class="px-1">
+            <a href="#"> Affiliates /</a>
+            <a href="#"> Contributors /</a>
+            <a href="#"> Press/Media /</a>
+            <a href="#"> Careers /</a>
+            <a href="#"> About /</a>
+            <a href="#"> Contact </a>
+          </p>
+          <div class="d-flex ">        
+            <a href="#" class="p-1"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            <a href="#" class="p-1"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            <a href="#" class="p-1"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+            <a href="#" class="p-1"><i class="fa fa-rss" aria-hidden="true"></i></a>
+          </div>
+      </div>
+      <p class="px-2 pb-4">2018 myCompant All rights reserved</p>
+      
+  </footer>
+</section>
